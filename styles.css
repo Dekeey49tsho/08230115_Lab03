@@ -1,0 +1,256 @@
+/* STYlE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background: #fff0f5;
+  color: #333;
+}
+
+/* Navigation */
+header {
+  background: linear-gradient(90deg, #ff6f91, #ffb6c1);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffe6eb;
+  transform: scale(1.1);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #ff9aa2, #ffb7b2, #ffdde1);
+  border-radius: 20px;
+  margin: 20px;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero span {
+  color: #fff8dc;
+}
+
+.hero .image img {
+  width: 50%;
+  border-radius: 0.5rem;
+  max-width: 100px;
+}
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff6f91;
+  font-size: 2rem;
+}
+
+/* About */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+
+.about-content .image img {
+  width: 90%;
+  border-radius: 1rem;
+  max-width: 150px;
+}
+
+/* Education & Skills */
+.card {
+  background: #ffe6eb;
+  margin: 10px auto;
+  padding: 15px;
+  max-width: 700px;
+  border-left: 5px solid #ff6f91;
+  border-radius: 10px;
+  color: #333; /* ensure visible in light mode */
+}
+
+.skills-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.skills-box div {
+  background: #fff;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  min-width: 250px;
+  color: #333;
+}
+
+.skill-img {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* Projects */
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.project {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  color: #333;
+}
+
+.projects-grid .project .image img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 100px;
+}
+
+.project .image img {
+  width: 90%;
+  border-radius: 1rem;
+  max-width: 200px;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background: linear-gradient(90deg, #ff6f91, #ffb7b2);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+  margin-top: 40px;
+  border-top: 4px solid #ff6f91;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Dark mode */
+body.dark {
+  background: #2c2c2c;
+  color: #f0f0f0;
+}
+
+body.dark header {
+  background: linear-gradient(90deg, #555, #333);
+}
+
+body.dark footer {
+  background: #111;
+}
+
+/* Dark mode section fixes */
+body.dark .card,
+body.dark .skills-box div,
+body.dark .project {
+  background: #3a3a3a;
+  color: #fff;
+  border-left-color: #ff9eb5;
+  box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+}
+
+body.dark h2 {
+  color: #ffb7c5;
+}
+
+/* Dark mode button */
+.toggle-mode {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  background: #ff6f91;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
